@@ -1,0 +1,82 @@
+:root {
+
+    --clr-primary-300: 256, 26%, 20%;
+    --clr-primary-400: 216, 30%, 68%;
+
+
+    --clr-neutral-300: 0, 0%, 100%;
+    --clr-neutral-400: 270, 9%, 17%;
+    --clr-neutral-500: 273, 4%, 51%;
+    --clr-neutral-600: 0, 0%, 98%;
+    --clr-neutral-700: 0, 0%, 0%;
+
+    --fs-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+    --fs-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+    --fs-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    --fs-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
+    --fs-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+    --fs-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+    --fs-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+    --fs-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+
+    --ff-primary-300: 'Karla', sans-serif;
+    --ff-secondary-300: 'DM Serif Display', serif;
+
+    --fw-300: 300;
+    --fw-400: 700;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+html:focu-within {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: var(--fs-500);
+    font-family: var(--ff-primary-300);
+    line-height: 1.5;
+    color: hsl(var(--clr-neutral-500));
+}
+
+h1, 
+h2, 
+h3 {
+    line-height: 1;
+    font-family: var(--ff-secondary-300);
+    font-weight: var(--fw-300);
+}
+
+ul[role= 'list'],
+ol[role= 'list'] {
+    list-style: none;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+img, video, picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

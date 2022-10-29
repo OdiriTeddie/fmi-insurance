@@ -1,0 +1,11 @@
+.wrapper {
+    --wrapper--max-width: 70rem;
+    --wrapper-padding: 3rem;
+    width: min(100% - var(--wrapper-padding), var(--wrapper--max-width));
+    margin-inline: auto;
+}
+
+
+.flow-spacer > * + *{
+    margin-top: var(--spacer, 1rem);
+}
