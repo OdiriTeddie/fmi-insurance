@@ -99,20 +99,19 @@
     & .wrapper {
         --wrapper-padding: 0;
         --gap: 0;
-        flex-direction: column-reverse;
     } 
 }
 
-.showcase__img {
-    height: calc(82vh - 77px);
+.showcase__img img{
     width: 100%;
 }
 
-.showcase__img-img{
-    background-image: url('../images/image-intro-mobile.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+.showcase__img img[data-type= "mobile-image" ] {
+    display: block;
+}
+
+.showcase__img img[data-type= "desktop-image" ] {
+    display: none;
 }
 
 .showcase__content {
@@ -124,8 +123,12 @@
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom -280px right;
 
-    &__title {
+    &_title {
         font-size: var(--fs-800);
+    }
+
+    &_paragraph {
+        font-size: var(--fs-400);
     }
 }
 
@@ -245,7 +248,7 @@
     // Showcase Section
 
     .showcase  {
-        z-index: 1000000;
+        position: relative;
         
         & .wrapper {
             position: relative;
@@ -258,25 +261,41 @@
         }
     }
 
+    .showcase__img {
+        position: absolute;
+        top: 80px;
+
+        display: flex;
+        justify-content: end;
+
+        img {
+            width: 35%;
+        }
+    }
+
+    .showcase__img img[data-type= "mobile-image" ] {
+        display: none;
+    }
+
+    .showcase__img img[data-type= "desktop-image" ] {
+        display: block;
+    }
+
     .showcase__content {
         order: 0;
         text-align: left;
         background-image: none;
     }
 
-    .showcase__img {
-        position: absolute;
-        outline: 1px solid red;
+    .btn[data-type = "btn-switch"] {
+        color: hsl(var(--clr-neutral-400));
+        background-color: hsl(var(--clr-neutral-600));
+
+        &:hover {
+            background: transparent;
+        }
     }
 
-
-    .showcase__img-img{
-        outline: 1px solid yellow;
-        background-image: url('../images/image-intro-desktop.jpg');
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: right top 100px;
-    }
 
     // Features Section
 
