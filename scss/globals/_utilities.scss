@@ -19,7 +19,6 @@
     border: 2px solid var(--border, hsl(var(--clr-neutral-300)));
     text-transform: uppercase;
     font-size: var(--fs-400);
-    font-weight: var(--fw-400);
 
     &:hover {
         color: hsl(var(--clr-neutral-400));
@@ -49,7 +48,7 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 8rem;
+        width: 9.5rem;
         height: 0.05rem;
         background-color: hsl(var(--clr-neutral-500));
     }
